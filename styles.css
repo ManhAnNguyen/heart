@@ -1,0 +1,58 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    background-color: #e7e7eb;
+}
+
+.container{
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.container #form{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.container #form input{
+    flex: 1;
+    height: 40px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+.container #form  button{
+    height: 40px;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+.todo-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: white;
+    margin-top: 15px;
+}
+
+.todo-item .delete{
+    background-color: red;
+    padding: 5px;
+    cursor: pointer;
+    color: white;
+}
+.todo-item .not-completed{
+    background-color: green;
+    padding: 5px;
+    cursor: pointer;
+    color: white;
+}
