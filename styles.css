@@ -1,58 +1,43 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 body{
     height: 100vh;
-    background-color: #e7e7eb;
-}
-
-.container{
-    max-width: 700px;
-    margin: 0 auto;
-    margin-top: 50px;
-}
-
-.container #form{
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content:center;
+    background: #111423;
 }
 
-.container #form input{
-    flex: 1;
-    height: 40px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid gray;
-}
-
-.container #form  button{
-    height: 40px;
+.heart{
+    width: 80px;
+    height: 80px;
+    background-color: #f20044;
+    position: relative;
+    transform: rotate(-45deg);
+    box-shadow: -10px 10px 90px #f20044;
+    transition: all 4s linear;
     cursor: pointer;
-    padding: 10px 20px;
 }
 
-.todo-item{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: white;
-    margin-top: 15px;
+.heart::before{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: #f20044;
+    border-radius: 60px;
+    top: -50%;
+    content: "";
+    box-shadow: -10px 10px 90px #f20044;
+}
+.heart::after{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: #f20044;
+    border-radius: 60px;
+    right: -50%;
+    box-shadow: -10px 10px 90px #f20044;
+    content: "";
 }
 
-.todo-item .delete{
-    background-color: red;
-    padding: 5px;
-    cursor: pointer;
-    color: white;
-}
-.todo-item .not-completed{
-    background-color: green;
-    padding: 5px;
-    cursor: pointer;
-    color: white;
+.heart:hover{
+    scale: 5;
 }
